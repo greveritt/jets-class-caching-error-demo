@@ -1,6 +1,7 @@
 Jets.application.routes.draw do
-  root "jets/welcome#index"
+  root 'jets/welcome#index'
 
+  get 'demo' => 'demo#index'
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
   # Can be used by load balancers and uptime monitors to verify that the app is live.
   get "up" => "jets/health#show", as: :jets_health_check
